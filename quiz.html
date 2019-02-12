@@ -1,0 +1,114 @@
+<html>
+<title>Genral quiz</title>
+<style>
+.f1{
+height:100%;
+width: 50%;
+padding: 10px;
+
+background-color: #27E573;
+border-radius: 50px;
+}
+.f2{
+	width: 100%;
+	height:30%;
+	background-color: #00FFFF;
+	padding: 20px;
+	border-bottom: #fff dashed 1px;
+}
+.f3{
+background-color:#777;
+padding: 10px;
+cursor: pointer; 
+}
+.f4{
+	text-align: left;
+}
+.f5{
+	background-color: #777;
+	font-family: "Lato";
+}
+.f6{
+	background-color: 
+    
+}
+</style>
+<body >
+	<div class="f2">
+		<h1><marquee class="f2"> QUIZ-APPLICATION</marquee></h1>
+		<center><div class="f5"><h3 id="demo">you scored 0 out of 4</h3></div></center>
+	</div>
+	<br>
+	<center>
+	<section class="f1">
+		<div >
+			
+			<form name="quizform" onsubmit="return submitanswer()" method="post">
+				<div class="f4">
+				<h3>1.captial of india</h3>
+				<input type="radio" value="a" name="q1" id="q1a">a.delhi<br>
+				<input type="radio" value="b" name="q1" id="q1b">b.tamilnadu<br>
+				<input type="radio" value="c" name="q1" id="q1c">c.kerala<br>
+				<input type="radio" value="d" name="q1" id="q1d">d.goa
+				<br>
+				<h3>2.color of banana</h3>
+				<input type="radio" value="a"  name="q2" id="q2a">a.yellow<br>
+				<input type="radio" value="b"  name="q2" id="q2b">b.red<br>
+				<input type="radio" value="c"  name="q2" id="q2c">c.orange<br>
+				<input type="radio" value="d"  name="q2" id="q2d">d.rose
+				<br>
+				<h3>3.week has how many days</h3>
+				<input type="radio" value="a"  name="q3" id="q3a">a.5<br>
+				<input type="radio" value="b"  name="q3" id="q3b">b.6<br>
+				<input type="radio" value="c"  name="q3" id="q3c">c.7<br>
+				<input type="radio" value="d"  name="q3" id="q3d">d.8
+				<br>
+				<h3>4.marvel film</h3>
+				<input type="radio" value="a"  name="q4" id="q4a">a.moonu<br>
+				<input type="radio" value="b"  name="q4" id="q4b">b.conjuring<br>
+				<input type="radio" value="c"  name="41" id="q4c">c.mersal<br>
+				<input type="radio" value="d"  name="q4" id="q4d">d.avengers
+				<br>
+				<br>
+			</div>
+				<input type="submit" value="submitAnswer" class="f3">
+			
+				</form>
+			
+			</div>
+		</section>
+	</center>
+	
+	<script>
+	function submitanswer(){
+		var total=4;
+		var score=0;
+		var q1=document.forms["quizform"]["q1"].value;
+		var q2=document.forms["quizform"]["q2"].value;
+		var q3=document.forms["quizform"]["q3"].value;
+		var q4=document.forms["quizform"]["q4"].value;
+		//alert(q1);
+		if(q1=="" || q2=="" || q3=="" || q4==""){
+			alert("you missed some question");
+			return false;
+		} 
+		if(q1=="a"){
+			score++;
+		}
+		if(q2=="a"){
+			score++;
+		}
+		if(q3=="c"){
+			score++;
+		}
+		if(q4=="d"){
+			score++;
+		}
+		document.getElementById("demo").innerHTML="you scored"+score+"out of 4";
+		return false;
+
+	}
+	</script>
+	</body>
+	</html>
+
